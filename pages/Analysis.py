@@ -12,9 +12,27 @@ st.set_page_config(page_title='Data Analysis', layout='wide')
 
 st.title("📊 Data Analysis")
 
-df = load_data('cleaned_e-comm.csv')
-df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
+# --- Load Data ---
+# Caching the data loading for better performance
+@st.cache_data
+def load_data(filepath):
+    """
+    Loads the cleaned e-commerce dataset from a CSV file.
+    """
+    try:
+        df = pd.read_csv(filepath, encoding='utf-8')
+        # Convert InvoiceDate to datetime objects
+        df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
+        return df
+    except FileNotFoundError:
+        st.error(f"Error: The file '{filepath}' was not found. Please make sure it's in the same directory as the app.")
+        return None
+    except Exception as e:
+        st.error(f"An error occurred while loading the data: {e}")
+        return None
 
+# Load the data
+df = load_data('cleaned_e-comm.csv')
 if df is not None:
     # --- Sidebar Filters ---
     st.sidebar.header("Filters")
@@ -131,4 +149,5 @@ if df is not None:
 
 else:
     st.warning("Please go to the main page to load the data first.")
+
 
