@@ -32,17 +32,7 @@ To get a local copy up and running, follow these simple steps.
 
 Make sure you have Python 3.8+ installed on your system.
 
-### Installation
-
-1.  Clone the repo
-    ```sh
-    git clone [https://github.com/your_username/your_repository_name.git](https://github.com/your_username/your_repository_name.git)
-    ```
-2.  Navigate to the project directory
-    ```sh
-    cd your_repository_name
-    ```
-3.  Install the required Python packages
+>  Install the required Python packages
     ```sh
     pip install -r requirements.txt
     ```
