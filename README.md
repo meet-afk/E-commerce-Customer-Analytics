@@ -2,7 +2,7 @@
 
 This project is an interactive e-commerce customer analytics dashboard built with Streamlit. It transforms a transactional dataset into actionable business insights by analyzing customer behavior.
 
-![Dashboard Screenshot](https://drive.google.com/file/d/18ip6tY9jxF1NLavNlGJOQPS4K384DpfJ/view?usp=sharing) <!-- Add a screenshot of your app here later! -->
+Dashboard Screenshot - (https://drive.google.com/file/d/18ip6tY9jxF1NLavNlGJOQPS4K384DpfJ/view?usp=drive_link)
 
 ## 📋 About The Project
 
