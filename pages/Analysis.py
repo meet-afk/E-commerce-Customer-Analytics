@@ -12,7 +12,7 @@ st.set_page_config(page_title='Data Analysis', layout='wide')
 
 st.title("📊 Data Analysis")
 
-df = pd.read_csv(r"C:/Users/gurme/Desktop/Codes/Python/e-com_project/cleaned_e-comm.csv")
+df = load_data('cleaned_e-comm.csv')
 df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
 
 if df is not None:
@@ -131,3 +131,4 @@ if df is not None:
 
 else:
     st.warning("Please go to the main page to load the data first.")
+
