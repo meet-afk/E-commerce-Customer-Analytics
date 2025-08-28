@@ -12,7 +12,7 @@ st.set_page_config(
 )
 st.title("🛒 E-commerce Customer Analytics Dashboard")
 
-df= pd.read_csv(r"C:/Users/gurme/Desktop/Codes/Python/e-com_project/cleaned_e-comm.csv")
+df= load_data('cleaned_e-comm.csv')
 
 if df is not None:
     st.success("Dataset loaded successfully!")
@@ -44,3 +44,4 @@ if df is not None:
 
 else:
     st.warning("Data could not be loaded. Please check the file path and integrity.")
+
