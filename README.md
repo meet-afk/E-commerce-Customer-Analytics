@@ -41,6 +41,9 @@ Make sure you have Python 3.8+ installed on your system.
 
 To run the Streamlit dashboard locally, use the following command in your terminal:
 
+
+the deployed app link - (https://e-commerce-customer-analysis.streamlit.app/)
+
 ```sh
 streamlit run Home.py
 
